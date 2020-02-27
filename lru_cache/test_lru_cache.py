@@ -27,6 +27,7 @@ class CacheTests(unittest.TestCase):
         self.assertEqual(self.cache.get('item1'), 'a')
         self.assertEqual(self.cache.get('item3'), 'c')
         self.assertEqual(self.cache.get('item4'), 'd')
+        print(self.cache.storagedict)
         self.assertIsNone(self.cache.get('item2'))
 
     def test_cache_nonexistent_retrieval(self):
